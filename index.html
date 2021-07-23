@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step Progress Indicator</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section class="progress">
+        <h2 class="progress__title">
+            Step Progress Indicator
+        </h2>
+        <div class="progress__steps">
+            <div class="progress__line" id="progressLine"></div>
+            <div class="progress__step active">
+                <div class="progress__step-num">
+                    01
+                </div>
+            </div>
+            <div class="progress__step">
+                <div class="progress__step-num">
+                    02
+                </div>
+            </div>
+            <div class="progress__step">
+                <div class="progress__step-num">
+                    03
+                </div>
+            </div>
+            <div class="progress__step">
+                <div class="progress__step-num">
+                    04
+                </div>
+            </div>
+        </div>
+        <div class="progress__btns">
+            <button class="progress__btn" id="prevBtn" disabled>
+                Prev step
+            </button>
+            <button class="progress__btn" id="nextBtn">
+                Next step
+            </button>
+        </div>
+    </section>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

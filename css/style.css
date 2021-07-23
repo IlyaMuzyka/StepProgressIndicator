@@ -1,0 +1,122 @@
+body {
+    font-family: 'Gilroy';
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: #2B303B;
+    color: #fff;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.progress {
+    text-align: center;
+}
+.progress__title {
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 500;
+    margin: 0;
+    margin-bottom: 80px;
+}
+.progress__steps {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 440px;
+}
+.progress__steps:before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 2px;
+    background: #3A3F4B;
+}
+.progress__line {
+    position: absolute;
+    z-index: -1;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0;
+    height: 2px;
+    background: #19BB94;
+    transition: .4s ease;
+}
+.progress__step {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+    height: 50px;
+    background: #323743;
+    border: 2px solid #3A3F4B;
+    border-radius: 50%;
+}
+.progress__step-num {
+    font-size: 20px;
+    line-height: 24px;
+    margin-top: 4px;
+}
+.progress__step.active {
+    border: 2px solid #19BB94;
+    transition: .6s ease;
+}
+.progress__btns {
+    margin-top: 40px;
+}
+.progress__btn {
+    font-family: 'Gilroy';
+    font-size: 15px;
+    line-height: 18px;
+    cursor: pointer;
+    border: none;
+    padding: 13px 20px 11px 20px;
+    border-radius: 10px;
+    background: #19BB94;
+    color: #fff;
+    transition: .3s ease;
+}
+.progress__btn:active {
+    opacity: .7;
+}
+.progress__btn + .progress__btn {
+    margin-left: 8px;
+}
+.progress__btn:disabled {
+    cursor: not-allowed;
+    background: #262A34;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url(../fonts/Gilroy-Medium.woff) format("woff"), url(../fonts/Gilroy-Medium.woff2) format("woff2"), url(../fonts/Gilroy-Medium.ttf) format("ttf");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* < 500px */
+@media screen and (max-width: 500px) {
+    .progress__title {
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 60px;
+    }
+    .progress__steps {
+        width: 100%;
+    }
+    .progress__step {
+        width: 45px;
+        height: 45px;
+    }
+    .progress__step-num {
+        font-size: 18px;
+        line-height: 22px;
+        margin-top: 3px;
+    }
+}
